@@ -59,6 +59,9 @@ const NavContainer = styled.nav`
   .nav-links {
     display: none;
   }
+  .cart-btn-wrapper {
+    display: none;
+  }
   @media (min-width: 992px) {
     .nav-toggle {
       display: none;
@@ -90,6 +93,9 @@ const NavContainer = styled.nav`
           border-bottom: 2px solid #c5a491;
         }
       }
+    }
+    .cart-btn-wrapper {
+      display: grid;
     }
   }
 `;
