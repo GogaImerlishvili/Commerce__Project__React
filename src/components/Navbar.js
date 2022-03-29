@@ -5,12 +5,13 @@ import { FaBars } from "react-icons/fa";
 import logo from "../assets/logo.svg";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
+
 const Navbar = () => {
   return (
     <NavContainer>
       <div className="nav-center">
         <Link to="/">
-          <img src={logo} alt="comfy sloth" />
+          <img src={logo} alt="comfy sloth" className="logo" />
         </Link>
         <button type="button" className="nav-toggle">
           <FaBars />
@@ -41,7 +42,8 @@ const NavContainer = styled.nav`
     width: 100%;
     margin: 0 auto;
     max-width: 100%;
-    margin-left: 1%;
+    margin-left: 7%;
+    margin-top: 1.2%;
   }
 
   .nav-toggle {
