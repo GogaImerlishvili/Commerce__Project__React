@@ -13,6 +13,9 @@ const CartButtons = () => {
           <span className="cart-value">12</span>
         </span>
       </Link>
+      <button className="auth-btn">
+        Login <FaUserPlus />
+      </button>
     </Wrapper>
   );
 };
@@ -24,13 +27,13 @@ const Wrapper = styled.div`
   width: 225px;
 
   .cart-btn {
-    color: grey;
+    color: #102a42;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-left: -95%;
+    margin-left: -320%;
   }
   .cart-container {
     display: flex;
@@ -38,7 +41,7 @@ const Wrapper = styled.div`
     position: relative;
     svg {
       height: 1.6rem;
-      margin-left: 5px;
+      margin-left: 15px;
     }
   }
 
@@ -56,6 +59,22 @@ const Wrapper = styled.div`
     font-size: 0.75rem;
     color: white;
     padding: 12px;
+  }
+
+  .auth-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    color: #102a42;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    right: 10%;
+    svg {
+      margin-left: 5px;
+    }
   }
 `;
 export default CartButtons;

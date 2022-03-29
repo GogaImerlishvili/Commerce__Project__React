@@ -77,16 +77,16 @@ const NavContainer = styled.nav`
     .nav-links {
       display: flex;
       justify-content: center;
-      margin-right: 30%;
+      margin-right: 34%;
       text-decoration: none;
       list-style: none;
 
       li {
-        margin: 0 1.8rem;
+        margin: 0 0.5rem;
       }
       a {
-        color: grey;
-        font-size: 1.5rem;
+        color: #102a42;
+        font-size: 1.2rem;
         text-transform: capitalize;
         letter-spacing: 0.1rem;
         padding: 0.5rem;
