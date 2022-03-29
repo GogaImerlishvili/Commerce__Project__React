@@ -27,7 +27,7 @@ const NavContainer = styled.nav`
   justify-content: center;
 
   .nav-center {
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
     max-width: 1170px;
     margin-left: 1%;
@@ -37,7 +37,8 @@ const NavContainer = styled.nav`
     background: transparent;
     border: transparent;
     color: hsl(22, 31%, 52%);
-    margin-left: 85%;
+    margin-left: 18%;
+    width: 100%;
     cursor: pointer;
     svg {
       font-size: 2rem;
@@ -48,14 +49,15 @@ const NavContainer = styled.nav`
     display: none;
   }
   @media (min-width: 992px) {
-    .nav-toggle {
+    /* .nav-toggle {
       display: none;
-    }
+    } */
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr auto;
       align-items: center;
     }
+
     .nav-links {
       display: flex;
       justify-content: center;
