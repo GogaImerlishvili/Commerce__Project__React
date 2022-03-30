@@ -5,9 +5,9 @@ import styled from "styled-components";
 import { links } from "../utils/constants";
 import { useUserContext } from "../context/user_context";
 import { FaTimes } from "react-icons/fa";
-import CartButtons from "./CartButtons";
+// import CartButtons from "./CartButtons";
 const Sidebar = () => {
-  const isOpen = true;
+  const isOpen = false;
   return (
     <SidebarContainer>
       <aside className={`${isOpen ? "sidebar show-sidebar" : "sidebar"}`}>
@@ -26,11 +26,11 @@ const Sidebar = () => {
             </li>
           );
         })}
-        {/* <li>
+        <li>
           <Link to="/checkout">checkout</Link>
-        </li> */}
+        </li>
       </ul>
-      <CartButtons />
+      {/* <CartButtons /> */}
     </SidebarContainer>
   );
 };
@@ -95,8 +95,13 @@ const SidebarContainer = styled.div`
   .cart-btn-wrapper {
     margin: 2rem auto;
   }
+
   @media screen and (min-width: 992px) {
     .sidebar {
+      display: none;
+    }
+
+    .links {
       display: none;
     }
   }

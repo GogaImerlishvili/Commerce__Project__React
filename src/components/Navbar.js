@@ -45,7 +45,15 @@ const NavContainer = styled.nav`
     margin-left: 7%;
     margin-top: 1.2%;
   }
-
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 175px;
+      margin-left: -15px;
+    }
+  }
   .nav-toggle {
     background: transparent;
     border: transparent;
