@@ -3,34 +3,59 @@ import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { links } from "../utils/constants";
+import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
-import { FaTimes } from "react-icons/fa";
-// import CartButtons from "./CartButtons";
+
+import {
+  FaTimes,
+  FaShoppingCart,
+  FaUserPlus,
+  FaUserMinus,
+} from "react-icons/fa";
+
 const Sidebar = () => {
-  const isOpen = false;
+  const { isSidebarOpen, closeSidebar } = useProductsContext();
   return (
     <SidebarContainer>
-      <aside className={`${isOpen ? "sidebar show-sidebar" : "sidebar"}`}>
+      <aside
+        className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+      >
         <div className="sidebar-header">
           <img src={logo} className="logo" alt="comfy sloth" />
-          <button className="close-btn" type="button">
+          <button className="close-btn" type="button" onClick={closeSidebar}>
             <FaTimes />
           </button>
         </div>
+
+        <ul className="links">
+          {links.map(({ id, text, url }) => {
+            return (
+              <li key={id}>
+                <Link to={url} onClick={closeSidebar}>
+                  {text}
+                </Link>
+              </li>
+            );
+          })}
+          <li>
+            <Link to="/checkout" onClick={closeSidebar}>
+              checkout
+            </Link>
+          </li>
+        </ul>
+        <div className="cart-buttons-container">
+          <Link to="/cart" className="cart-btn2">
+            Cart
+            <span className="cart-container2">
+              <FaShoppingCart />
+              <span className="cart-value2">12</span>
+            </span>
+          </Link>
+          <button className="auth-btn2">
+            Login <FaUserPlus />
+          </button>
+        </div>
       </aside>
-      <ul className="links">
-        {links.map(({ id, text, url }) => {
-          return (
-            <li key={id}>
-              <Link to={url}>{text}</Link>
-            </li>
-          );
-        })}
-        <li>
-          <Link to="/checkout">checkout</Link>
-        </li>
-      </ul>
-      {/* <CartButtons /> */}
     </SidebarContainer>
   );
 };
@@ -102,6 +127,9 @@ const SidebarContainer = styled.div`
     }
 
     .links {
+      display: none;
+    }
+    .cart-buttons-container {
       display: none;
     }
   }

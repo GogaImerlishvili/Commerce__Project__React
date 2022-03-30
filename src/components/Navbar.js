@@ -5,15 +5,17 @@ import { FaBars } from "react-icons/fa";
 import logo from "../assets/logo.svg";
 import { links } from "../utils/constants";
 import CartButtons from "./CartButtons";
+import { useProductsContext } from "../context/products_context";
 
 const Navbar = () => {
+  const { openSidebar } = useProductsContext();
   return (
     <NavContainer>
       <div className="nav-center">
         <Link to="/">
           <img src={logo} alt="comfy sloth" className="logo" />
         </Link>
-        <button type="button" className="nav-toggle">
+        <button type="button" className="nav-toggle" onClick={openSidebar}>
           <FaBars />
         </button>
       </div>
@@ -61,6 +63,8 @@ const NavContainer = styled.nav`
     margin-left: 18%;
     /* width: 100%; */
     cursor: pointer;
+    position: absolute;
+    top: 7%;
     svg {
       font-size: 2rem;
     }

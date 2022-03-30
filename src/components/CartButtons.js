@@ -2,11 +2,14 @@ import React from "react";
 import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useProductsContext } from "../context/products_context";
 
 const CartButtons = () => {
+  const { closeSidebar } = useProductsContext();
+
   return (
     <Wrapper className="cart-btn-wrapper">
-      <Link to="/cart" className="cart-btn">
+      <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
         Cart
         <span className="cart-container">
           <FaShoppingCart />
@@ -24,7 +27,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  width: 225px;
+  width: 250px;
 
   .cart-btn {
     color: #102a42;
@@ -48,7 +51,7 @@ const Wrapper = styled.div`
   .cart-value {
     position: absolute;
     top: -10px;
-    right: -16px;
+    right: -12px;
     background: #ab7a5f;
     width: 16px;
     height: 16px;
