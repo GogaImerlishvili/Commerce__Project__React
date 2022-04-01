@@ -37,7 +37,8 @@ const Wrapper = styled.section`
     display: block;
     border-radius: 0.25rem;
     height: 500px;
-    object-fit: cover;
+    /* position: relative; */
+    /* object-fit: cover; */
   }
   p {
     line-height: 2;
@@ -53,13 +54,12 @@ const Wrapper = styled.section`
     margin-left: 0;
   }
   @media (min-width: 992px) {
-    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+
     img {
-      height: 800px;
-    }
-    .title2 {
-      display: flex;
-      margin-left: 50%;
+      margin-top: -12%;
+
+      /* height: 600px; */
     }
   }
 `;

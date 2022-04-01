@@ -175,11 +175,21 @@ p {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
 }
-.title {
-  margin-left: 13%;
-  margin-top: -2%;
+.title2 {
+  margin-left: 52%;
+  margin-top: -28%;
+  margin-bottom: 35%;
 }
-
+.featured-title{
+  margin-left: 37%;
+}
+.featured-underline{
+  width: 14rem;
+  height: 0.25rem;
+  background: #49a6e9;
+  background: var(--clr-primary-5);
+  margin-left: 37%;
+}
 .title .underline {
   width: 7rem;
   height: 0.25rem;
@@ -190,10 +200,7 @@ p {
 }
 
 .paragraph{
-  margin-top: 2%;
-  width: 42%;
-  font-size: 1.2rem;
-  line-height: 1.5;
+ color: black;
 }
 .page-100 {
   min-height: calc(100vh - 10rem);
