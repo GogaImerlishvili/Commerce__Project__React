@@ -11,7 +11,7 @@ const Services = () => {
             built only for you
           </h3>
           <p>
-            China Foshan Commercial Hotel Apartment Modern Design Custom Made
+            Goga's Commercial Hotel Apartment Modern Design Custom Made
             Furniture
           </p>
         </article>
@@ -63,9 +63,11 @@ const Wrapper = styled.section`
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: 0.25rem;
-    width: 400px;
+    width: 420px;
+    height: 300px;
     p {
       color: #5f4435;
+      font-size: 12px;
     }
   }
   span {
