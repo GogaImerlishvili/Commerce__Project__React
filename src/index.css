@@ -31,7 +31,7 @@ body {
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-5: #617d98;
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
   --clr-grey-8: hsl(210, 31%, 80%);
@@ -174,15 +174,21 @@ p {
   background: var(--clr-primary-7);
 }
 .title {
-  text-align: center;
+  margin-left: 13%;
 }
 .title .underline {
-  width: 6rem;
+  width: 7rem;
   height: 0.25rem;
   background: #49a6e9;
   background: var(--clr-primary-5);
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
+}
+
+.paragraph{
+  margin-top: 2%;
+  width: 40%;
+  font-size: 1.2rem;
 }
 .page-100 {
   min-height: calc(100vh - 10rem);
