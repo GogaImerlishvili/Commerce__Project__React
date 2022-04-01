@@ -13,9 +13,9 @@ body {
 }
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(22, 28%, 21%);
+  --clr-primary-1: #453227;
   --clr-primary-2: hsl(22, 28%, 29%);
-  --clr-primary-3: hsl(22, 28%, 37%);
+  --clr-primary-3: #795744;
   --clr-primary-4: hsl(22, 28%, 45%);
   /* primary/main color */
   --clr-primary-5: #ab7a5f;
@@ -175,6 +175,7 @@ p {
 }
 .title {
   margin-left: 13%;
+  margin-top: -2%;
 }
 .title .underline {
   width: 7rem;
@@ -187,7 +188,7 @@ p {
 
 .paragraph{
   margin-top: 2%;
-  width: 40%;
+  width: 42%;
   font-size: 1.2rem;
 }
 .page-100 {
