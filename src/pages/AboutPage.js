@@ -11,7 +11,7 @@ const AboutPage = () => {
         <img src={aboutImg} alt="nice desk" />
       </Wrapper>
       <article>
-        <div className="title">
+        <div className="title title2 ">
           <h2>Our story</h2>
 
           <div className="underline"></div>
@@ -31,7 +31,7 @@ const AboutPage = () => {
 
 const Wrapper = styled.section`
   display: grid;
-  gap: 2rem;
+  gap: 4rem;
   img {
     width: 100%;
     display: block;
@@ -53,7 +53,14 @@ const Wrapper = styled.section`
     margin-left: 0;
   }
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
+    img {
+      height: 800px;
+    }
+    .title2 {
+      display: flex;
+      margin-left: 50%;
+    }
   }
 `;
 export default AboutPage;
