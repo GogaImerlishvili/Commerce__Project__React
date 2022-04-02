@@ -184,7 +184,7 @@ p {
   margin-left: 37%;
 }
 .featured-underline{
-  width: 14rem;
+  width: 24rem;
   height: 0.25rem;
   background: #49a6e9;
   background: var(--clr-primary-5);
