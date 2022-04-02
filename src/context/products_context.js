@@ -22,6 +22,7 @@ const initialState = {
   single_product_loading: false,
   single_product_error: false,
   single_product: {},
+  // fetchSingleProduct: {},
 };
 
 const ProductsContext = React.createContext();
@@ -66,6 +67,7 @@ export const ProductsProvider = ({ children }) => {
         ...state,
         openSidebar,
         closeSidebar,
+        fetchSingleProduct,
       }}
     >
       {children}
