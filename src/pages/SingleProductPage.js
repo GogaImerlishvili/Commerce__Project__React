@@ -6,7 +6,7 @@ import { formatPrice } from "../utils/helpers";
 import {
   Loading,
   Error,
-  ProductImages,
+  ProductsImages,
   AddToCart,
   Stars,
   PageHero,
@@ -57,16 +57,46 @@ const SingleProductPage = () => {
   } = product;
   return (
     <Wrapper>
-      <PageHero title={name} />
+      <PageHero title={name} product />
+      <div className="section section-center2 page">
+        <Link to="/products" className="btn2">
+          back to products
+        </Link>
+        <div className="product-center">
+          <ProductsImages images={images} />
+          <section className="content">
+            <h2>{name}</h2>
+            <Stars stars={stars} reviews={reviews} />
+            <h5 className="price">{formatPrice(price)}</h5>
+            <p className="desc">{description}</p>
+            <p className="info">
+              <span>Available : </span>
+              {stock > 0 ? "In stock" : "out of stock"}
+            </p>
+            <p className="info">
+              <span>SKU : </span>
+              {sku}
+            </p>
+            <p className="info">
+              <span>Brand : </span>
+              {company}
+            </p>
+            <hr />
+            {stock > 0 && <AddToCart product={product} />}
+          </section>
+        </div>
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.main`
   .product-center {
-    display: grid;
-    gap: 4rem;
-    margin-top: 2rem;
+    /* display: grid; */
+    /* gap: 4rem; */
+    margin-top: 1rem;
+    /* margin-left: 50%; */
+    display: flex;
   }
   .price {
     color: #ab7a5f;
