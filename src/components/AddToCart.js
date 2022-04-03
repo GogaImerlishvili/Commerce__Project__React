@@ -56,11 +56,11 @@ const AddToCart = ({ product }) => {
             increase={increase}
             decrease={decrease}
           />
-          <Link to="/cart" className="add-btn">
-            add to cart
-          </Link>
         </div>
       </div>
+      <Link to="/cart" className="btn">
+        add to cart
+      </Link>
     </Wrapper>
   );
 };
