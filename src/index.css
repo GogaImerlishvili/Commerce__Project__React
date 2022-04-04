@@ -20,7 +20,7 @@ body {
   /* primary/main color */
   --clr-primary-5: #ab7a5f;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(22, 31%, 60%);
+  --clr-primary-6: #ba9178;
   --clr-primary-7: #c5a491;
   --clr-primary-8: hsl(20, 31%, 74%);
   --clr-primary-9: hsl(22, 31%, 81%);
@@ -127,9 +127,7 @@ p {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width:  1280px;
-  margin-top: 6%;
-
+  max-width:  1280px; 
 }
 
 @media screen and (min-width: 992px) {
