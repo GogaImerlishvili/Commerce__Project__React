@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { links } from "../utils/constants";
 import { useProductsContext } from "../context/products_context";
+import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
 
 import {
@@ -15,6 +16,7 @@ import {
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
+  const { total_items } = useCartContext();
   return (
     <SidebarContainer>
       <aside
@@ -48,7 +50,7 @@ const Sidebar = () => {
             Cart
             <span className="cart-container2">
               <FaShoppingCart />
-              <span className="cart-value2">12</span>
+              <span className="cart-value2">{total_items}</span>
             </span>
           </Link>
           <button className="auth-btn2">
