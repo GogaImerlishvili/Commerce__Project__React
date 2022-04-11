@@ -40,7 +40,7 @@ const Filters = () => {
           </div>
 
           <div className="form-control">
-            <h5>category</h5>
+            <h5 className="left">category</h5>
             <div>
               {categories.map((c, index) => {
                 return (
@@ -61,7 +61,7 @@ const Filters = () => {
           </div>
 
           <div className="form-control">
-            <h5>company</h5>
+            <h5> company</h5>
             <select
               name="company"
               value={company}
@@ -153,6 +153,7 @@ const Filters = () => {
 const Wrapper = styled.section`
   .form-control {
     margin-bottom: 1.25rem;
+    margin-right: 12rem;
     h5 {
       margin-bottom: 0.5rem;
     }
