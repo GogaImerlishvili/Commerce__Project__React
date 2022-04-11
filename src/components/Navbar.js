@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import logo from "../assets/logo.svg";
 import { links } from "../utils/constants";
+import { socialIcons } from "../utils/socials";
 import CartButtons from "./CartButtons";
 import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
@@ -22,6 +23,14 @@ const Navbar = () => {
         </button>
       </div>
       <ul className="nav-links">
+        {socialIcons.map((item) => {
+          const { id, icon, url } = item;
+          return (
+            <li key={id}>
+              <a href={url}>{icon}</a>
+            </li>
+          );
+        })}
         {links.map((link) => {
           const { id, text, url } = link;
           return (
@@ -96,7 +105,7 @@ const NavContainer = styled.nav`
     .nav-links {
       display: flex;
       justify-content: center;
-      margin-right: 34%;
+      margin-right: 30%;
       text-decoration: none;
       list-style: none;
 
@@ -108,7 +117,7 @@ const NavContainer = styled.nav`
         font-size: 1.2rem;
         text-transform: capitalize;
         letter-spacing: 0.1rem;
-        padding: 0.5rem;
+        padding: 0.8rem;
         text-decoration: none;
         &:hover {
           border-bottom: 2px solid #c5a491;
