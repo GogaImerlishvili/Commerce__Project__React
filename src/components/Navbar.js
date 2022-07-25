@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import logo from "../assets/logo.svg";
 import { links } from "../utils/constants";
-import { socialIcons } from "../utils/socials";
 import CartButtons from "./CartButtons";
 import { useProductsContext } from "../context/products_context";
 import { useUserContext } from "../context/user_context";
@@ -21,31 +20,24 @@ const Navbar = () => {
         <button type="button" className="nav-toggle" onClick={openSidebar}>
           <FaBars />
         </button>
-      </div>
-      <ul className="nav-links">
-        {socialIcons.map((item) => {
-          const { id, icon, url } = item;
-          return (
-            <li key={id}>
-              <a href={url}>{icon}</a>
-            </li>
-          );
-        })}
-        {links.map((link) => {
-          const { id, text, url } = link;
-          return (
-            <li key={id}>
-              <Link to={url}>{text}</Link>
-            </li>
-          );
-        })}
+        <ul className="nav-links">
+          {links.map((link) => {
+            const { id, text, url } = link;
+            return (
+              <li key={id}>
+                <Link to={url}>{text}</Link>
+              </li>
+            );
+          })}
+        </ul>
         {myUser && (
           <li>
             <Link to="/checkout">checkout</Link>
           </li>
         )}
-      </ul>
-      <CartButtons />
+
+        <CartButtons />
+      </div>
     </NavContainer>
   );
 };
@@ -55,6 +47,10 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .nav-links {
+    position: relative;
+  }
 
   .nav-center {
     width: 100%;

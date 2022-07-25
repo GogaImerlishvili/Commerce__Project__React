@@ -84,10 +84,14 @@ const Wrapper = styled.section`
       font-size: 2rem;
     }
   }
-  @media (min-width: 992px) {
+  @media (max-width: 992px) {
     .header {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+    .services-center {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     }
   }
   @media (min-width: 576px) {

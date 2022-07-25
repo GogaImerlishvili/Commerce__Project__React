@@ -50,6 +50,16 @@ const Wrapper = styled.section`
       margin: 0 auto;
       text-align: center;
     }
+    @media (max-width: 1250px) {
+      width: 100%;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
     @media (min-width: 576px) {
       .featured {
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

@@ -13,36 +13,47 @@ const CartButtons = () => {
 
   return (
     <Wrapper className="cart-btn-wrapper">
-      <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
-        Cart
-        <span className="cart-container">
-          <FaShoppingCart />
-          <span className="cart-value">{total_items}</span>
-        </span>
-      </Link>
-      {myUser ? (
-        <button
-          type="button"
-          className="auth-btn"
-          onClick={() => logout({ returnTo: window.location.origin })}
-        >
-          Logout <FaUserMinus />
-        </button>
-      ) : (
-        <button className="auth-btn" onClick={loginWithRedirect}>
-          Login <FaUserPlus />
-        </button>
-      )}
+      <div className="cart">
+        <Link to="/cart" className="cart-btn" onClick={closeSidebar}>
+          <span className="cart-container">
+            Cart
+            <FaShoppingCart />
+            <span className="cart-value">{total_items}</span>
+          </span>
+        </Link>
+        {myUser ? (
+          <button
+            type="button"
+            className="auth-btn"
+            onClick={() => logout({ returnTo: window.location.origin })}
+          >
+            Logout <FaUserMinus />
+          </button>
+        ) : (
+          <button className="auth-btn" onClick={loginWithRedirect}>
+            Login <FaUserPlus />
+          </button>
+        )}
+      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+
+  /* grid-template-columns: 1fr 1fr; */
   align-items: center;
   width: 250px;
 
+  .cart {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    position: relative;
+    padding: 50px;
+    margin-left: -50%;
+  }
   .cart-btn {
     color: #102a42;
     font-size: 1.5rem;
@@ -50,12 +61,18 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-left: -320%;
+    /* margin-left: -320%; */
   }
   .cart-container {
     display: flex;
     align-items: center;
     position: relative;
+    margin-left: 85%;
+    color: #102a42;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+
+    text-decoration: none;
     svg {
       height: 1.6rem;
       margin-left: 15px;
